@@ -48,6 +48,7 @@ def loop(args):
         words = re.findall(r'\w+', line) #tu trzeba recognition OGARNAC POTEM!!
         if words:
             baudout(game.do_command(words))
+            synthesis(game.do_command(words))
 
 if __name__ == '__main__':
     try:
