@@ -13,7 +13,7 @@ def synthesis(text):
 
     sentence = text
 
-    print(sentence)
+    # print(sentence)
     engineio.say(sentence)
     engineio.runAndWait()
 

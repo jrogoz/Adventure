@@ -7,11 +7,12 @@ Apache License, Version 2.0 as detailed in the accompanying README.txt.
 import argparse
 import os
 import re
-import readline
+import pyreadline
 import sys
 from time import sleep
 from . import load_advent_dat
 from .game import Game
+from .speech import synthesis
 
 BAUD = 1200
 
@@ -38,6 +39,8 @@ def loop(args):
     else:
         game = Game.resume(args.savefile)
         baudout('GAME RESTORED\n')
+        synthesis('GAME RESTORED')
+
 
     while not game.is_finished:
         line = input('> ')

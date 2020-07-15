@@ -28,20 +28,24 @@ def play(seed=None):
 
     from .game import Game
     from .prompt import install_words
+    from .speech import synthesis
 
     _game = Game(seed)
     load_advent_dat(_game)
     install_words(_game)
     _game.start()
     print(_game.output[:-1])
+    synthesis(_game.output[:-1])
 
 def resume(savefile, quiet=False):
     global _game
 
     from .game import Game
     from .prompt import install_words
+    from .speech import synthesis
 
     _game = Game.resume(savefile)
     install_words(_game)
     if not quiet:
         print('GAME RESTORED\n')
+        synthesis("GAME RESTORED")
