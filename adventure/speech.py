@@ -1,3 +1,10 @@
+"""Parse the original PDP ``advent.dat`` file.
+
+Copyright 2010-2015 Brandon Rhodes.  Licensed as free software under the
+Apache License, Version 2.0 as detailed in the accompanying README.txt.
+
+"""
+
 import speech_recognition as sr
 import pyttsx3
 import pyaudio
