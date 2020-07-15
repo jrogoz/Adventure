@@ -36,7 +36,6 @@ def play(seed=None):
     _game.start()
     print(_game.output[:-1])
     synthesis(_game.output[:-1])
-    print("frytki")
 
 def resume(savefile, quiet=False):
     global _game

@@ -36,6 +36,7 @@ def loop(args):
         load_advent_dat(game)
         game.start()
         baudout(game.output)
+        synthesis(game.output)
     else:
         game = Game.resume(args.savefile)
         baudout('GAME RESTORED\n')
@@ -44,7 +45,7 @@ def loop(args):
 
     while not game.is_finished:
         line = input('> ')
-        words = re.findall(r'\w+', line)
+        words = re.findall(r'\w+', line) #tu trzeba recognition OGARNAC POTEM!!
         if words:
             baudout(game.do_command(words))
 
