@@ -1,0 +1,12 @@
+.coverage
+htmlcov/
+*~
+__pycache__/
+*.pyc
+/MANIFEST
+build/
+dist/
+*.egg-info
+LICENSE.ASF-2
+README.md
+.idea/
